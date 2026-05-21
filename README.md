@@ -90,7 +90,7 @@ That gives you what to charge so that after fees, you land on your intended pric
 
 *MercadoPago checkout. The grossed-up amount ($9.781,12) lands here after the fee calculation.*
 
-Bank transfers add another layer. Many attendees paid via CBU transfer rather than card, and uploaded a photo of their receipt as proof. I ran those receipts through Claude Vision to extract the amount, the transfer date, and the COELSA ID, the unique transaction identifier issued by the Argentine interbank clearing network. The COELSA ID became the idempotency key: if a receipt was submitted twice, we'd catch the duplicate before doing anything with it. The OCR runs fire-and-forget. It doesn't block the order response, it updates the record asynchronously once the analysis comes back.
+Bank transfers add another layer. Many attendees paid via CBU transfer rather than card, and uploaded a photo of their receipt as proof. The plan was to automate reconciliation using COELSA IDs as idempotency keys, the unique transaction identifiers issued by the Argentine interbank clearing network. In practice it didn't hold: receipts from other wallets and banks outside of MercadoPago native often omitted the COELSA ID entirely, and payers from those platforms didn't always include a CUIT either. Not enough signal to reconcile reliably. Bank transfers ended up being matched manually.
 
 Webhook verification for MercadoPago payments uses HMAC-SHA256. The platform sends a signature in a specific format, you reconstruct the manifest from the request body and timestamp, and compare with timing-safe equality. One wrong byte and the webhook is rejected.
 
