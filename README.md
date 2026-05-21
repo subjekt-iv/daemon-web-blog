@@ -80,8 +80,11 @@ const grossedAmount = new Big(amount).div(new Big(1).minus(new Big(0.066).times(
 
 That gives you what to charge so that after fees, you land on your intended price. All monetary math in the project uses [big.js](https://github.com/MikeMcl/big.js/) — no floating-point arithmetic anywhere near money.
 
+![Payment method selector](./images/tickets-payment-selector.png)
+*The ticket purchase flow — bank transfer or card. The shader background runs behind it.*
+
 ![MercadoPago checkout redirect](./images/mp-checkout.png)
-*The MercadoPago checkout — the grossed-up amount lands here.*
+*MercadoPago checkout — the grossed-up amount ($9.781,12) lands here after the fee calculation.*
 
 Bank transfers add another layer. Many attendees paid via CBU transfer rather than card, and uploaded a photo of their receipt as proof. I ran those receipts through Claude Vision to extract the amount, the transfer date, and the COELSA ID — the unique transaction identifier issued by the Argentine interbank clearing network. The COELSA ID became the idempotency key: if a receipt was submitted twice, we'd catch the duplicate before doing anything with it. The OCR runs fire-and-forget — it doesn't block the order response, it updates the record asynchronously once the analysis comes back.
 
