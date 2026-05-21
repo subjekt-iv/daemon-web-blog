@@ -27,7 +27,7 @@ I'd sold tickets before. Through platforms that hold your money for weeks and ch
 
 337 people walked in. Nothing broke.
 
-Full writeup with technical details, code snippets, and videos: [link]
+Full writeup with technical details, code snippets, and videos: https://github.com/subjekt-iv/daemon-web-blog
 
 ---
 
