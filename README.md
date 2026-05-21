@@ -84,7 +84,8 @@ That gives you what to charge so that after fees, you land on your intended pric
 
 *The ticket purchase flow — bank transfer or card. The shader background runs behind it.*
 
-![MercadoPago checkout redirect](./images/mp-checkout.png)
+<img src="./images/mp-checkout.png" width="320" alt="MercadoPago checkout redirect">
+
 *MercadoPago checkout — the grossed-up amount ($9.781,12) lands here after the fee calculation.*
 
 Bank transfers add another layer. Many attendees paid via CBU transfer rather than card, and uploaded a photo of their receipt as proof. I ran those receipts through Claude Vision to extract the amount, the transfer date, and the COELSA ID — the unique transaction identifier issued by the Argentine interbank clearing network. The COELSA ID became the idempotency key: if a receipt was submitted twice, we'd catch the duplicate before doing anything with it. The OCR runs fire-and-forget — it doesn't block the order response, it updates the record asynchronously once the analysis comes back.
@@ -94,7 +95,8 @@ Webhook verification for MercadoPago payments uses HMAC-SHA256 — the platform 
 ![Admin orders table](./images/admin-orders.png)
 *Admin dashboard — order status badges, promo codes, multi-entry counts (×2 / 2/2 ingresos).*
 
-![Ticket confirmation email](./images/ticket-email.png)
+<img src="./images/ticket-email.png" width="320" alt="Ticket confirmation email">
+
 *The ticket email — SVG rendered to PNG server-side, QR code attached.*
 
 ---
