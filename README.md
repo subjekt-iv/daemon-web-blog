@@ -21,6 +21,8 @@ The project is four surfaces that look very different from the outside but share
 
 One repo. One `vercel deploy`. Four entry points.
 
+Keeping it in one repo meant the admin dashboard, the scanner, and the public ticketing flow all shared the same API layer and environment. One deploy, one set of secrets, no coordination overhead.
+
 ---
 
 ## How it grew
