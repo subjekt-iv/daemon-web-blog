@@ -33,7 +33,7 @@ Then I added a tickets route. Once that was working, the natural next step was a
 
 So I went looking on my own and found [spite/cruciform](https://github.com/spite/cruciform), a Three.js architectural visualization by Jaume Sanchez, an open-source "study in architectural visualisation" built around a corridor and a hall OBJ model with baked lighting. It was exactly the kind of space I wanted. I forked it, placed each artist's press photo as a texture on the corridor walls, and suddenly the lineup had a home.
 
-<video src="./media/01-corridor.mp4" controls></video>
+<video src="https://github.com/subjekt-iv/daemon-web-blog/releases/download/v1.0-media/01-corridor.mp4" controls></video>
 
 *The corridor running. Navigate with W or ArrowUp. Each panel is an artist in the lineup.*
 
@@ -44,7 +44,7 @@ ffmpeg -framerate 30 -i daemon-director-%04d.png \
   -c:v libx264 -pix_fmt yuv420p -r 30 daemon-director-reel.mp4
 ```
 
-<video src="./media/02-director-output.mp4" controls></video>
+<video src="https://github.com/subjekt-iv/daemon-web-blog/releases/download/v1.0-media/02-director-output.mp4" controls></video>
 
 *Director mode exporting frames. Same geometry, social media output.*
 
@@ -58,7 +58,7 @@ The corridor was adapted. The homepage background was built from scratch.
 
 It's a GLSL fragment shader running on a full-viewport canvas through [glsl-canvas-js](https://github.com/actarian/glsl-canvas). The visual is driven by 4D Perlin noise: two layered noise fields that warp each other, producing the slow organic movement you see. The fourth dimension of the noise is time, which is what keeps it alive without any geometry or animation loop in the traditional sense.
 
-<video src="./media/03-glsl-background.mp4" controls></video>
+<video src="https://github.com/subjekt-iv/daemon-web-blog/releases/download/v1.0-media/03-glsl-background.mp4" controls></video>
 
 *The homepage GLSL background, audio-reactive and pointer-interactive.*
 
@@ -119,7 +119,7 @@ SELECT * FROM orders WHERE id = order_id FOR UPDATE;
 
 `FOR UPDATE` acquires a row-level lock. The second scanner request has to wait until the first one completes. By the time it runs, `scan_count` is already 1. It increments to 2. Both scans register. Nobody gets in twice.
 
-<video src="./media/04-scanner.mp4" controls></video>
+<video src="https://github.com/subjekt-iv/daemon-web-blog/releases/download/v1.0-media/04-scanner.mp4" controls></video>
 
 *Scanner in action. Approval overlay shows the running entry count.*
 
