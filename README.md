@@ -91,7 +91,7 @@ Bank transfers add another layer. Many attendees paid via CBU transfer rather th
 Webhook verification for MercadoPago payments uses HMAC-SHA256 — the platform sends a signature in a specific format, you reconstruct the manifest from the request body and timestamp, and compare with timing-safe equality. One wrong byte and the webhook is rejected.
 
 ![Admin orders table](./images/admin-orders.png)
-*Admin dashboard — order status, entry counts, OCR flags.*
+*Admin dashboard — order status badges, promo codes, multi-entry counts (×2 / 2/2 ingresos).*
 
 ![Ticket confirmation email](./images/ticket-email.png)
 *The ticket email — SVG rendered to PNG server-side, QR code attached.*
