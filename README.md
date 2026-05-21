@@ -80,7 +80,8 @@ const grossedAmount = new Big(amount).div(new Big(1).minus(new Big(0.066).times(
 
 That gives you what to charge so that after fees, you land on your intended price. All monetary math in the project uses [big.js](https://github.com/MikeMcl/big.js/) — no floating-point arithmetic anywhere near money.
 
-![Payment method selector](./images/tickets-payment-selector.png)
+<img src="./images/tickets-payment-selector.png" width="320" alt="Payment method selector">
+
 *The ticket purchase flow — bank transfer or card. The shader background runs behind it.*
 
 ![MercadoPago checkout redirect](./images/mp-checkout.png)
