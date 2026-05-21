@@ -149,6 +149,10 @@ Three hundred thirty-seven tickets. A full room. The system ran from the first s
 
 That's what it looks like when a software developer produces their own event.
 
+Thanks for reading. Really appreciate it.
+
+Agus &lt;3
+
 ---
 
 *The Three.js corridor is built on [spite/cruciform](https://github.com/spite/cruciform) by Jaume Sanchez, used under MIT license. Post-processing via [Wagner](https://github.com/spite/Wagner).*
