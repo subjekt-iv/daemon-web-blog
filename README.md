@@ -1,8 +1,8 @@
-# I run a rave. I also write software. So I built the whole thing myself.
+# I run a local rave and mixed arts event. I also write software. So I built the whole thing myself.
 
 There's a version of this post where I tell you I built a full event platform with AI in one afternoon and it made me a million dollars. That's not this post.
 
-I'm a software developer. I also produce underground electronic music events in Buenos Aires. For DÆMON, the first edition, I used AI throughout the process, as a tool, to go faster and to work in areas where my experience was thinner. The architecture, the decisions, the debugging at midnight before the event: that was mine.
+I'm a software developer. I also produce underground electronic music events in Buenos Aires. For DÆMON, the first edition, I used AI throughout the process, as a tool, to go faster and to work in areas where my experience was thinner. The architecture, the decisions, the features I was still adding the night before the event: that was mine.
 
 Three hundred thirty-seven tickets sold. The night ran without a single incident.
 
